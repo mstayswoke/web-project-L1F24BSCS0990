@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoundIt | Report an Item</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <header>
+        <h1>FoundIt<span>!</span></h1>
+        <p>Give lost things a way back.</p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="media.html">Explore Items</a>
+            <a href="register.html">Report an Item</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-intro">
+            <h2>Report a Lost or Found Item</h2>
+            <p>Tell us about the item so we can help connect it with its owner.</p>
+        </section>
+
+        <form action="#" method="get">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname"
+                       placeholder="Enter your name"
+                       minlength="3" maxlength="50" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="name@example.com" required>
+
+                <label for="password">Create Password</label>
+                <input type="password" id="password" name="password"
+                       minlength="8" required>
+
+                <label for="website">Profile Website (optional)</label>
+                <input type="url" id="website" name="website"
+                       placeholder="https://example.com">
+
+                <label for="reportdate">Date of Report</label>
+                <input type="date" id="reportdate" name="reportdate" required>
+
+                <label for="contacttime">Preferred Contact Time</label>
+                <input type="time" id="contacttime" name="contacttime">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Item Information</legend>
+
+                <label for="itemname">Item Name</label>
+                <input type="text" id="itemname" name="itemname"
+                       placeholder="e.g. Wallet, keys or bag" required>
+
+                <label for="itemtype">Report Type</label>
+                <select id="itemtype" name="itemtype" required>
+                    <option value="" selected disabled>Select report type</option>
+                    <option value="lost">I lost an item</option>
+                    <option value="found">I found an item</option>
+                </select>
+
+                <label for="category">Item Category</label>
+                <select id="category" name="category">
+                    <option value="accessories">Accessories</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="bags">Bags</option>
+                    <option value="documents">Cards and Documents</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location"
+                       placeholder="Where was it lost or found?" required>
+
+                <label for="quantity">Number of Items</label>
+                <input type="number" id="quantity" name="quantity"
+                       min="1" max="10" value="1">
+
+                <label for="itemcolor">Main Item Colour</label>
+                <input type="color" id="itemcolor" name="itemcolor" value="#087fbd">
+
+                <label for="condition">How urgent is the report?</label>
+                <input type="range" id="condition" name="condition"
+                       min="1" max="10" value="5">
+
+                <label for="itemphoto">Upload Item Photo</label>
+                <input type="file" id="itemphoto" name="itemphoto"
+                       accept="image/*">
+
+                <label for="description">Item Description</label>
+                <textarea id="description" name="description"
+                          rows="4" maxlength="300"
+                          placeholder="Describe identifying details..."></textarea>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Details</legend>
+
+                <p class="question">Where did you hear about FoundIt?</p>
+
+                <label class="choice">
+                    <input type="radio" name="source" value="university" required>
+                    University
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="source" value="friend">
+                    Friend
+                </label>
+
+                <label class="choice">
+                    <input type="radio" name="source" value="social">
+                    Social Media
+                </label>
+
+                <label class="choice">
+                    <input type="checkbox" name="agreement" required>
+                    I confirm that the information provided is correct.
+                </label>
+
+                <label for="reference">Reference Number (not editable)</label>
+                <input type="text" id="reference" value="FI-2026-001" readonly>
+
+                <label for="accountstatus">Account Status</label>
+                <input type="text" id="accountstatus" value="Available" disabled>
+
+            </fieldset>
+
+            <div class="form-buttons">
+                <button type="submit">Submit Report</button>
+                <button type="reset" class="reset-button">Clear Form</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FoundIt. Built to bring belongings back.</p>
+    </footer>
+
+</body>
+</html>

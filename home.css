@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #17233b;
+}
+
+header {
+    background-color: #101b33;
+    color: white;
+    padding: 20px 7%;
+    border-bottom: 4px solid #20c5d8;
+}
+
+#logo {
+    margin: 0;
+    font-size: 32px;
+}
+
+#logo span {
+    color: #20c5d8;
+}
+
+.tagline {
+    color: #c7d2e5;
+    margin-top: 5px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 18px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #20c5d8;
+}
+
+.hero {
+    padding: 55px 7%;
+    background-color: white;
+    overflow: auto;
+}
+
+.hero-text {
+    width: 55%;
+    float: left;
+    padding-right: 30px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-top: 10px;
+}
+
+.hero p {
+    line-height: 1.8;
+    color: #56647b;
+}
+
+.hero img {
+    width: 45%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 3px solid #dce5f1;
+}
+
+.main-button {
+    display: inline-block;
+    background-color: #087fbd;
+    color: white;
+    padding: 12px 22px;
+    margin-top: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.main-button:hover {
+    background-color: #075985;
+}
+
+.steps {
+    padding: 35px 7%;
+    text-align: center;
+}
+
+.steps h2 {
+    margin-bottom: 25px;
+}
+
+.step {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    background-color: white;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid #dce5f1;
+    border-radius: 10px;
+}
+
+.step h3 {
+    color: #087fbd;
+}
+
+.step p {
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #101b33;
+    color: white;
+    padding: 18px;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero-text,
+    .hero img {
+        float: none;
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero img {
+        height: 230px;
+        margin-top: 20px;
+    }
+
+    .step {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

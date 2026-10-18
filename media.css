@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #edf3f8;
+    color: #17233b;
+}
+
+header {
+    background-color: #101b33;
+    color: white;
+    padding: 22px 6%;
+    background-image: linear-gradient(to right, #101b33, #164e63);
+}
+
+nav {
+    margin-top: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+nav a:hover {
+    color: #20c5d8;
+}
+
+main {
+    padding: 25px 6%;
+}
+
+.intro {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    height: 330px;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.intro img {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    float: right;
+    margin: 0 10px 10px 20px;
+}
+
+.tips {
+    background-color: #dcecf5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #087fbd;
+}
+
+.tips li {
+    margin-bottom: 8px;
+}
+
+.item-info {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #b7c8d9;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #164e63;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #edf3f8;
+}
+
+.media-box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+video,
+audio {
+    max-width: 100%;
+}
+
+footer {
+    background-color: #101b33;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

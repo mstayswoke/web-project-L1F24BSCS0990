@@ -1,160 +1,257 @@
+/* ==========================================
+   FOUNDIT - HOMEPAGE STYLESHEET (home.css)
+   Aesthetic: Retro Editorial / Dark Slate & Sage
+   ========================================== */
+
+/* 1. Typography Import (Playfair Display for Editorial Headings) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+/* 2. Global CSS Variables (Shared Brand Palette) */
+:root {
+    --color-slate-panel: #263D42;   /* Floating Central Card Base */
+    --color-sage: #78866D;          /* Brand Muted Sage Accent */
+    --color-cream: #F0E9D9;         /* Warm Cream Body & Typography */
+    --color-cream-card: #FAF6EE;    /* Off-White Inner Card Surfaces */
+    --color-terracotta: #C87950;    /* Terracotta CTAs & Sticker Highlights */
+    --color-terracotta-hover: #b0653d;
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', Arial, sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
 
+/* 3. Page Body & Full-Bleed Photographic Background */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fb;
-    color: #17233b;
+    padding: 20px 0;
+    font-family: var(--font-body);
+    color: var(--color-cream);
+    background-color: #1a2528;
+    background-image: 
+        /* Subtle radial dots over dark overlay */
+        radial-gradient(rgba(240, 233, 217, 0.08) 1px, transparent 1px),
+        /* Dark atmospheric overlay tint */
+        linear-gradient(rgba(15, 23, 25, 0.75), rgba(15, 23, 25, 0.75)),
+        /* The chosen EDC photograph */
+        url('bg-edc.jpg');
+    background-size: 24px 24px, cover, cover;
+    background-position: 0 0, center, center;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
+/* 4. Central Floating Slate Panel (Wraps Layout) */
+header, 
+main, 
+footer {
+    max-width: 1050px;
+    margin: 0 auto;
+    background-color: var(--color-slate-panel);
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+/* Rounded top edges on header, rounded bottom on footer */
 header {
-    background-color: #101b33;
-    color: white;
-    padding: 20px 7%;
-    border-bottom: 4px solid #20c5d8;
+    margin-top: 20px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom: 2px solid rgba(120, 134, 109, 0.3);
 }
 
+footer {
+    margin-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top: 1px solid rgba(240, 233, 217, 0.1);
+    text-align: center;
+}
+
+/* 5. Header & Navigation */
 #logo {
     margin: 0;
-    font-size: 32px;
+    font-family: var(--font-heading);
+    font-size: 44px;
+    letter-spacing: -1px;
+    color: var(--color-cream);
 }
 
 #logo span {
-    color: #20c5d8;
+    color: var(--color-terracotta);
 }
 
 .tagline {
-    color: #c7d2e5;
-    margin-top: 5px;
+    color: var(--color-sage);
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 nav {
-    margin-top: 20px;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 nav a {
-    color: white;
+    color: var(--color-cream);
     text-decoration: none;
-    margin-right: 18px;
     font-size: 14px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(240, 233, 217, 0.2);
+    transition: all 0.2s ease;
 }
 
 nav a:hover {
-    color: #20c5d8;
+    background-color: var(--color-sage);
+    border-color: var(--color-sage);
+    color: var(--color-cream);
 }
 
+/* 6. Hero Section (Editorial Layout) */
 .hero {
-    padding: 55px 7%;
-    background-color: white;
-    overflow: auto;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    border-bottom: 1px solid rgba(240, 233, 217, 0.1);
 }
 
 .hero-text {
-    width: 55%;
-    float: left;
-    padding-right: 30px;
+    flex: 1;
 }
 
 .hero h2 {
-    font-size: 38px;
-    margin-top: 10px;
+    font-family: var(--font-heading);
+    font-size: 46px;
+    line-height: 1.15;
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: var(--color-cream);
 }
 
 .hero p {
-    line-height: 1.8;
-    color: #56647b;
+    line-height: 1.7;
+    color: rgba(240, 233, 217, 0.85);
+    font-size: 17px;
+    margin-bottom: 25px;
 }
 
 .hero img {
-    width: 45%;
-    height: 280px;
+    flex: 1;
+    max-width: 450px;
+    width: 100%;
+    height: 310px;
     object-fit: cover;
-    border-radius: 14px;
-    border: 3px solid #dce5f1;
+    border-radius: 12px;
+    border: 3px solid var(--color-sage);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .main-button {
     display: inline-block;
-    background-color: #087fbd;
-    color: white;
-    padding: 12px 22px;
-    margin-top: 12px;
-    border-radius: 6px;
+    background-color: var(--color-terracotta);
+    color: var(--color-cream);
+    padding: 14px 28px;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 30px;
     text-decoration: none;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(200, 121, 80, 0.3);
+    transition: background-color 0.2s ease;
 }
 
 .main-button:hover {
-    background-color: #075985;
+    background-color: var(--color-terracotta-hover);
 }
 
+/* 7. How FoundIt Works Steps Grid */
 .steps {
-    padding: 35px 7%;
-    text-align: center;
+    padding: 50px 0;
 }
 
 .steps h2 {
-    margin-bottom: 25px;
+    font-family: var(--font-heading);
+    font-size: 34px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 35px;
+    color: var(--color-cream);
+}
+
+.step-container {
+    display: flex;
+    gap: 20px;
 }
 
 .step {
-    display: inline-block;
-    width: 30%;
-    vertical-align: top;
-    background-color: white;
-    padding: 20px;
-    margin: 1%;
-    border: 1px solid #dce5f1;
-    border-radius: 10px;
+    flex: 1;
+    background-color: var(--color-cream-card);
+    color: #1F2D30;
+    padding: 28px 22px;
+    border-radius: 12px;
+    border-top: 5px solid var(--color-sage);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .step h3 {
-    color: #087fbd;
+    margin-top: 0;
+    font-family: var(--font-heading);
+    font-size: 22px;
+    color: var(--color-terracotta);
 }
 
 .step p {
     line-height: 1.6;
+    font-size: 14px;
+    color: #3E4E52;
+    margin-bottom: 0;
 }
 
-footer {
-    background-color: #101b33;
-    color: white;
-    padding: 18px;
-    text-align: center;
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-sage);
 }
 
-@media (max-width: 650px) {
-    header {
-        padding: 20px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 6px;
+/* 8. Mobile Responsiveness */
+@media (max-width: 768px) {
+    header, main, footer {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .hero {
-        padding: 30px 20px;
+        flex-direction: column;
+        padding: 30px 0;
     }
 
-    .hero-text,
     .hero img {
-        float: none;
-        width: 100%;
+        max-width: 100%;
+        height: 240px;
     }
 
     .hero h2 {
-        font-size: 30px;
+        font-size: 34px;
     }
 
-    .hero img {
-        height: 230px;
-        margin-top: 20px;
+    .steps {
+        padding: 30px 0;
     }
 
-    .step {
-        width: 100%;
-        margin: 10px 0;
+    .step-container {
+        flex-direction: column;
     }
 }

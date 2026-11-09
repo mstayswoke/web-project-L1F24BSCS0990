@@ -1,0 +1,190 @@
+/* ==========================================
+   FOUNDIT - RECOVERY PAGE STYLESHEET (recover.css)
+   ========================================== */
+
+/* 1. Page Header Intro */
+.recovery-intro {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.recovery-intro h2 {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    color: var(--color-cream);
+    margin: 0 0 10px 0;
+}
+
+.recovery-intro p {
+    color: rgba(240, 233, 217, 0.85);
+    font-size: 16px;
+    margin: 0;
+}
+
+/* 2. Responsive Item Details & Form Layout (Grid + Flexbox) */
+.item-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* 3. Left Column: Item Status Card */
+.item-card {
+    background-color: var(--color-cream-card);
+    color: #1F2D30;
+    padding: 30px;
+    border-radius: 14px;
+    border-top: 5px solid var(--color-terracotta);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.status-badge.alert {
+    display: inline-block;
+    background-color: #FBECE4;
+    color: var(--color-terracotta);
+    border: 1px solid var(--color-terracotta);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.item-card h3 {
+    font-family: var(--font-heading);
+    font-size: 26px;
+    margin: 0 0 8px 0;
+    color: var(--color-slate-panel);
+}
+
+.tag-id {
+    font-size: 14px;
+    color: #56647B;
+    margin-bottom: 20px;
+}
+
+.tag-id code {
+    background-color: rgba(38, 61, 66, 0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: var(--color-slate-panel);
+    font-weight: 700;
+}
+
+.owner-message-box {
+    background-color: #FFFFFF;
+    border-left: 4px solid var(--color-sage);
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.box-title {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-sage);
+    margin: 0 0 6px 0;
+}
+
+.box-content {
+    font-style: italic;
+    color: #3E4E52;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 4. Right Column: Finder Contact Form Card */
+.finder-form-card {
+    background-color: var(--color-cream-card);
+    color: #1F2D30;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.finder-form-card h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--color-terracotta);
+    margin: 0 0 10px 0;
+}
+
+.finder-form-card p {
+    font-size: 14px;
+    color: #4A585C;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.finder-form-card label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    color: #2F3E42;
+}
+
+.finder-form-card label:first-of-type {
+    margin-top: 0;
+}
+
+.finder-form-card input,
+.finder-form-card textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #C8D2C2;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    background-color: #FFFFFF;
+    color: #1F2D30;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.finder-form-card input:focus,
+.finder-form-card textarea:focus {
+    outline: none;
+    border-color: var(--color-terracotta);
+    box-shadow: 0 0 0 4px rgba(200, 121, 80, 0.25);
+}
+
+.submit-btn {
+    margin-top: 22px;
+    width: 100%;
+    background-color: var(--color-terracotta);
+    color: var(--color-cream);
+    border: none;
+    padding: 14px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(200, 121, 80, 0.35);
+    transition: all 0.25s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-terracotta-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(200, 121, 80, 0.45);
+}
+
+/* 5. Responsive Layout */
+@media (max-width: 800px) {
+    .item-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-card,
+    .finder-form-card {
+        padding: 22px 18px;
+    }
+}

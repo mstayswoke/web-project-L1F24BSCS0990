@@ -1,0 +1,258 @@
+/* ==========================================
+   FOUNDIT - DASHBOARD STYLESHEET (dashboard.css)
+   ========================================== */
+
+/* 1. Header & Action Button */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(240, 233, 217, 0.15);
+    margin-bottom: 30px;
+}
+
+.dashboard-header h2 {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    color: var(--color-cream);
+    margin: 0 0 6px 0;
+}
+
+.dashboard-header p {
+    color: rgba(240, 233, 217, 0.85);
+    margin: 0;
+    font-size: 15px;
+}
+
+.add-button {
+    background-color: var(--color-terracotta);
+    color: var(--color-cream);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 22px;
+    border-radius: 30px;
+    box-shadow: 0 4px 14px rgba(200, 121, 80, 0.35);
+    transition: all 0.25s ease;
+}
+
+.add-button:hover {
+    background-color: var(--color-terracotta-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(200, 121, 80, 0.45);
+}
+
+/* 2. Stats Grid */
+.stats-grid {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--color-cream-card);
+    color: #1F2D30;
+    padding: 24px 20px;
+    border-radius: 12px;
+    border-top: 5px solid var(--color-sage);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-card.highlight {
+    border-top-color: var(--color-terracotta);
+}
+
+.stat-number {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--color-slate-panel);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-card.highlight .stat-number {
+    color: var(--color-terracotta);
+}
+
+.stat-label {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #56647B;
+}
+
+/* 3. Dashboard Sections & Table */
+.dashboard-section {
+    background-color: var(--color-cream-card);
+    color: #1F2D30;
+    padding: 30px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-section h3 {
+    font-family: var(--font-heading);
+    color: var(--color-terracotta);
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--color-sage);
+    color: var(--color-cream);
+    font-family: var(--font-heading);
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+td {
+    border-bottom: 1px solid #E2D7C3;
+    color: #2F3E42;
+    font-size: 14px;
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(240, 233, 217, 0.45);
+}
+
+code {
+    background-color: rgba(38, 61, 66, 0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: var(--color-slate-panel);
+    font-weight: 700;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-badge.safe {
+    background-color: #E2ECE0;
+    color: var(--color-sage);
+    border: 1px solid var(--color-sage);
+}
+
+.status-badge.pending {
+    background-color: #FBECE4;
+    color: var(--color-terracotta);
+    border: 1px solid var(--color-terracotta);
+}
+
+.table-link {
+    color: var(--color-terracotta);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.table-link:hover {
+    text-decoration: underline;
+}
+
+/* 4. Finder Message Card */
+.message-card {
+    background-color: #FFFFFF;
+    border-left: 5px solid var(--color-terracotta);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.message-header h4 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--color-slate-panel);
+}
+
+.message-time {
+    font-size: 12px;
+    color: #8A969B;
+    font-weight: 600;
+}
+
+.message-body {
+    font-style: italic;
+    color: #3E4E52;
+    line-height: 1.6;
+    margin-top: 0;
+    margin-bottom: 15px;
+    background-color: #FAF6EE;
+    padding: 12px 15px;
+    border-radius: 6px;
+}
+
+.message-contact {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    color: #56647B;
+}
+
+/* 5. Mobile Responsiveness */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+    .dashboard-section {
+        padding: 20px 15px;
+    }
+}

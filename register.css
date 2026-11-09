@@ -1,142 +1,8 @@
 /* ==========================================
-   FOUNDIT - REPORT / REGISTER STYLESHEET (register.css)
-   Aesthetic: Retro Editorial with Styled Form Inputs
+   FOUNDIT - REGISTRATION PAGE STYLESHEET (register.css)
    ========================================== */
 
-/* 1. Typography Import */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
-
-/* 2. Global CSS Variables */
-:root {
-    --color-slate-panel: #263D42;   /* Central Floating Panel Base */
-    --color-sage: #78866D;          /* Muted Sage Green Accent */
-    --color-cream: #F0E9D9;         /* Warm Cream Body & Headings */
-    --color-cream-card: #FAF6EE;    /* Form Surface */
-    --color-terracotta: #C87950;    /* Terracotta Action Buttons & Highlights */
-    --color-terracotta-hover: #b0653d;
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Plus Jakarta Sans', Arial, sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-/* 3. Page Body & Full Photographic Background */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-body);
-    color: var(--color-cream);
-    background-color: #162023;
-    background-image: 
-        linear-gradient(rgba(18, 26, 28, 0.55), rgba(18, 26, 28, 0.55)),
-        url('bg-edc.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-
-/* 4. Floating Capsule Header Bar */
-header {
-    max-width: 1050px;
-    margin: 24px auto 0 auto;
-    padding: 16px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(38, 61, 66, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(240, 233, 217, 0.22);
-    border-radius: 50px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-    animation: headerFade 1.0s ease-out forwards;
-}
-
-#logo {
-    margin: 0;
-    font-family: var(--font-heading);
-    font-size: 32px;
-    line-height: 1;
-    letter-spacing: -0.5px;
-    color: var(--color-cream);
-}
-
-#logo span {
-    color: var(--color-terracotta);
-}
-
-.tagline {
-    color: var(--color-sage);
-    margin: 4px 0 0 0;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: var(--color-cream);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid transparent;
-    transition: all 0.25s ease;
-}
-
-nav a:hover {
-    background-color: var(--color-sage);
-    color: var(--color-cream);
-    border-color: rgba(240, 233, 217, 0.15);
-}
-
-/* 5. Central Floating Slate Panel */
-main {
-    max-width: 900px;
-    margin: 30px auto 40px auto;
-    background-color: var(--color-slate-panel);
-    padding: 45px 6%;
-    border-radius: 20px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
-    border: 1px solid rgba(240, 233, 217, 0.14);
-    opacity: 0;
-    animation: slateReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
-}
-
-@keyframes slateReveal {
-    0% {
-        opacity: 0;
-        transform: translateY(50px) scale(0.96);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes headerFade {
-    0% {
-        opacity: 0;
-        transform: translateY(-25px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 6. Form Header Section */
+/* 1. Form Introductory Container */
 .form-intro {
     text-align: center;
     margin-bottom: 30px;
@@ -156,7 +22,7 @@ main {
     line-height: 1.6;
 }
 
-/* 7. Form & Input Controls */
+/* 2. Inner Off-White Form Card */
 form {
     background-color: var(--color-cream-card);
     color: #1F2D30;
@@ -190,6 +56,7 @@ label {
     color: #2F3E42;
 }
 
+/* 3. Form Input Control Styling */
 input:not([type="radio"]):not([type="checkbox"]),
 select,
 textarea {
@@ -219,7 +86,7 @@ input[type="file"] {
     background-color: rgba(240, 233, 217, 0.4);
 }
 
-/* Terracotta Glow Highlights on Input Focus */
+/* Interactive Focus Glow Rings */
 input:focus,
 select:focus,
 textarea:focus {
@@ -273,15 +140,11 @@ label.choice input {
     height: 18px;
 }
 
-label.choice:last-child {
-    margin-top: 20px;
-}
-
 textarea {
     resize: vertical;
 }
 
-/* 8. Action Buttons */
+/* 4. Action Buttons */
 .form-buttons {
     display: flex;
     gap: 14px;
@@ -320,39 +183,8 @@ button.reset-button:hover {
     box-shadow: 0 8px 20px rgba(120, 134, 109, 0.45);
 }
 
-/* 9. Footer */
-footer {
-    max-width: 1050px;
-    margin: 0 auto 30px auto;
-    text-align: center;
-    padding: 15px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-    color: var(--color-sage);
-}
-
-/* 10. Responsive Layout */
+/* 5. Mobile Responsiveness */
 @media (max-width: 650px) {
-    header {
-        flex-direction: column;
-        border-radius: 24px;
-        padding: 18px 20px;
-        gap: 14px;
-        margin: 15px 15px 0 15px;
-    }
-
-    nav {
-        justify-content: center;
-    }
-
-    main {
-        margin: 15px 15px 30px 15px;
-        padding: 25px 18px;
-    }
-
     form {
         padding: 20px 15px;
     }

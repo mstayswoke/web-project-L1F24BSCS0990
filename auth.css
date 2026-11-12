@@ -1,3 +1,20 @@
+header {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+    border-radius: 24px;
+    padding: 20px 30px;
+}
+
+.brand-group {
+    align-items: center;
+}
+
+nav a.active {
+    background-color: var(--color-cream);
+    color: var(--color-slate-panel);
+}
+
 .auth-box {
     max-width: 470px;
     margin: 0 auto;
@@ -68,7 +85,7 @@
 }
 
 .form-options {
-    margin: 18px 0 22px;
+    margin: 18px 0 20px;
 }
 
 .checkbox-label {
@@ -84,6 +101,29 @@
     accent-color: var(--color-terracotta);
     width: 16px;
     height: 16px;
+}
+
+.auth-form .form-feedback {
+    display: none;
+    margin: 0 0 16px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.auth-form .form-feedback.error {
+    display: block;
+    background-color: #FBECE4;
+    color: #A84A24;
+    border-left: 4px solid var(--color-terracotta);
+}
+
+.auth-form .form-feedback.success {
+    display: block;
+    background-color: #E2ECE0;
+    color: #46543D;
+    border-left: 4px solid var(--color-sage);
 }
 
 .auth-button {
@@ -123,6 +163,12 @@
 
 .auth-footer-text a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .auth-box {
+        max-width: 440px;
+    }
 }
 
 @media (max-width: 600px) {

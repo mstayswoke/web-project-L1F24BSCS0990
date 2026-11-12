@@ -161,8 +161,31 @@ nav a.active {
     box-shadow: 0 0 0 4px rgba(200, 121, 80, 0.25);
 }
 
+.finder-form-card .form-feedback {
+    display: none;
+    margin: 16px 0 0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.finder-form-card .form-feedback.error {
+    display: block;
+    background-color: #FBECE4;
+    color: #A84A24;
+    border-left: 4px solid var(--color-terracotta);
+}
+
+.finder-form-card .form-feedback.success {
+    display: block;
+    background-color: #E2ECE0;
+    color: #46543D;
+    border-left: 4px solid var(--color-sage);
+}
+
 .submit-btn {
-    margin-top: 22px;
+    margin-top: 18px;
     width: 100%;
     background-color: var(--color-terracotta);
     color: var(--color-cream);

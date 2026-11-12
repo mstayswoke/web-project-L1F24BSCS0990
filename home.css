@@ -1,151 +1,38 @@
-/* ==========================================
-   FOUNDIT - HOMEPAGE STYLESHEET (home.css)
-   Aesthetic: Retro Editorial with Delayed Slow-Mo Entry
-   ========================================== */
+/* HOMEPAGE STYLESHEET (home.css)*/
 
-/* 1. Typography Import */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
-
-/* 2. Global CSS Variables */
-:root {
-    --color-slate-panel: #263D42;   /* Central Floating Panel Base */
-    --color-sage: #78866D;          /* Muted Sage Green Accent */
-    --color-cream: #F0E9D9;         /* Warm Cream Body & Headings */
-    --color-cream-card: #FAF6EE;    /* Inner Step Card Surface */
-    --color-terracotta: #C87950;    /* Terracotta CTAs & Highlights */
-    --color-terracotta-hover: #b0653d;
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Plus Jakarta Sans', Arial, sans-serif;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-/* 3. Page Body & Full Photographic Background */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-body);
-    color: var(--color-cream);
-    background-color: #162023;
-    background-image: 
-        linear-gradient(rgba(18, 26, 28, 0.50), rgba(18, 26, 28, 0.50)),
-        url('bg-edc.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-}
-
-/* 4. Floating Capsule Header Bar */
+/* Navbar Styling*/
 header {
-    max-width: 1050px;
-    margin: 24px auto 0 auto;
-    padding: 16px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(38, 61, 66, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(240, 233, 217, 0.22);
     border-radius: 50px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-    animation: headerFade 1.0s ease-out forwards;
+    border-bottom: 2px solid var(--color-terracotta);
 }
 
-#logo {
-    margin: 0;
-    font-family: var(--font-heading);
-    font-size: 32px;
-    line-height: 1;
-    letter-spacing: -0.5px;
+nav a.active {
+    background-color: var(--color-terracotta);
     color: var(--color-cream);
 }
 
-#logo span {
-    color: var(--color-terracotta);
-}
-
-.tagline {
-    color: var(--color-sage);
-    margin: 4px 0 0 0;
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: var(--color-cream);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid transparent;
-    transition: all 0.25s ease;
-}
-
-nav a:hover {
-    background-color: var(--color-sage);
-    color: var(--color-cream);
-    border-color: rgba(240, 233, 217, 0.15);
-}
-
-/* 5. Central Floating Slate Panel (Slower Reveal Animation) */
-main {
-    max-width: 1050px;
-    margin: 30px auto 40px auto;
-    background-color: var(--color-slate-panel);
-    padding: 50px 6%;
-    border-radius: 20px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
-    border: 1px solid rgba(240, 233, 217, 0.14);
-    
-    /* 1.5s initial delay + 1.8s smooth duration so user sees full bg first */
-    opacity: 0;
-    animation: slateReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
-}
-
-/* 6. Keyframe Animations */
-@keyframes slateReveal {
-    0% {
-        opacity: 0;
-        transform: translateY(60px) scale(0.96);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes headerFade {
-    0% {
-        opacity: 0;
-        transform: translateY(-25px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 7. Hero Section Layout */
+/*Hero Section Layout */
 .hero {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 40px;
     padding-bottom: 45px;
     border-bottom: 1px solid rgba(240, 233, 217, 0.15);
+}
+
+.hero-badge {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    background-color: var(--color-sage);
+    color: var(--color-cream);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 14px;
+    border-radius: 20px;
 }
 
 .hero-text {
@@ -156,7 +43,7 @@ main {
     font-family: var(--font-heading);
     font-size: 46px;
     line-height: 1.15;
-    margin-top: 0;
+    margin-top: 12px;
     margin-bottom: 18px;
     color: var(--color-cream);
 }
@@ -172,8 +59,8 @@ main {
     flex: 1;
     max-width: 400px;
     width: 100%;
-    height: 380px;
-    object-fit: contain;
+    height: 360px;
+    object-fit: cover;
     background-color: #1c2e32;
     padding: 8px;
     border-radius: 14px;
@@ -207,7 +94,7 @@ main {
     box-shadow: 0 8px 20px rgba(200, 121, 80, 0.45);
 }
 
-/* 8. Steps Breakdown Grid */
+/* Steps Grid */
 .steps {
     padding-top: 40px;
     display: flex;
@@ -222,13 +109,13 @@ main {
     font-size: 34px;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     color: var(--color-cream);
 }
 
 .step {
     flex: 1;
-    min-width: 250px;
+    min-width: 240px;
     background-color: var(--color-cream-card);
     color: #1F2D30;
     padding: 28px 22px;
@@ -257,39 +144,102 @@ main {
     margin-bottom: 0;
 }
 
-/* 9. Footer */
-footer {
-    max-width: 1050px;
-    margin: 0 auto 30px auto;
-    text-align: center;
-    padding: 15px;
+/* Editorial Recovery */
+.recovery-guide {
+    background-color: var(--color-cream-card);
+    color: #1F2D30;
+    padding: 30px;
+    margin-top: 35px;
+    border-radius: 14px;
+    border-left: 6px solid var(--color-terracotta);
+    overflow: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
-    color: var(--color-sage);
+.recovery-guide h2,
+.media-box h2 {
+    font-family: var(--font-heading);
+    color: var(--color-terracotta);
+    margin-top: 0;
+    font-size: 26px;
 }
 
-/* 10. Responsive Layout */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        border-radius: 24px;
-        padding: 18px 20px;
-        gap: 14px;
-        margin: 15px 15px 0 15px;
+.recovery-guide h3 {
+    font-family: var(--font-heading);
+    color: var(--color-slate-panel);
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.recovery-guide ol,
+.recovery-guide ul {
+    padding-left: 22px;
+    line-height: 1.8;
+    color: #2F3E42;
+}
+
+.float-img {
+    float: right;
+    width: 230px;
+    height: 170px;
+    object-fit: cover;
+    margin: 0 0 15px 25px;
+    border-radius: 10px;
+    border: 3px solid var(--color-sage);
+}
+
+/*Media Card */
+.media-box {
+    background-color: var(--color-cream-card);
+    color: #1F2D30;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.media-box h4 {
+    margin: 0 0 10px 0;
+    color: var(--color-slate-panel);
+    font-size: 15px;
+}
+
+.media-grid {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+video,
+audio {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid var(--color-sage);
+}
+
+video {
+    width: 320px;
+}
+
+/*Tablet Layout */
+@media (max-width: 900px) {
+    .hero {
+        gap: 25px;
     }
 
-    nav {
-        justify-content: center;
+    .hero h2 {
+        font-size: 36px;
     }
 
-    main {
-        margin: 15px 15px 30px 15px;
-        padding: 30px 20px;
+    .hero img {
+        max-width: 320px;
+        height: 290px;
     }
+}
 
+/*Mobile Layout */
+@media (max-width: 600px) {
     .hero {
         flex-direction: column;
         padding-bottom: 30px;
@@ -297,14 +247,21 @@ footer p {
 
     .hero img {
         max-width: 100%;
-        height: 320px;
+        height: 250px;
     }
 
     .hero h2 {
-        font-size: 34px;
+        font-size: 30px;
     }
 
     .step {
         width: 100%;
+    }
+
+    .float-img {
+        float: none;
+        width: 100%;
+        height: 190px;
+        margin: 0 0 15px 0;
     }
 }

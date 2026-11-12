@@ -1,18 +1,25 @@
-/* ==========================================
-   FOUNDIT - RECOVERY PAGE STYLESHEET (recover.css)
-   ========================================== */
+header {
+    border-radius: 16px;
+    border-top: 3px solid var(--color-terracotta);
+    border-bottom: 3px solid var(--color-terracotta);
+}
 
-/* 1. Page Header Intro */
+nav a.active {
+    background-color: transparent;
+    border: 1.5px solid var(--color-cream);
+    color: var(--color-cream);
+}
+
 .recovery-intro {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 }
 
 .recovery-intro h2 {
     font-family: var(--font-heading);
-    font-size: 38px;
+    font-size: 36px;
     color: var(--color-cream);
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
 }
 
 .recovery-intro p {
@@ -21,25 +28,26 @@
     margin: 0;
 }
 
-/* 2. Responsive Item Details & Form Layout (Grid + Flexbox) */
 .item-details-grid {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
-    gap: 30px;
+    gap: 28px;
     align-items: start;
 }
 
-/* 3. Left Column: Item Status Card */
 .item-card {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-cream-card);
     color: #1F2D30;
-    padding: 30px;
+    padding: 28px;
     border-radius: 14px;
     border-top: 5px solid var(--color-terracotta);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .status-badge.alert {
+    align-self: flex-start;
     display: inline-block;
     background-color: #FBECE4;
     color: var(--color-terracotta);
@@ -55,14 +63,14 @@
 .item-card h3 {
     font-family: var(--font-heading);
     font-size: 26px;
-    margin: 0 0 8px 0;
+    margin: 0 0 8px;
     color: var(--color-slate-panel);
 }
 
 .tag-id {
     font-size: 14px;
     color: #56647B;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 }
 
 .tag-id code {
@@ -87,7 +95,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: var(--color-sage);
-    margin: 0 0 6px 0;
+    margin: 0 0 6px;
 }
 
 .box-content {
@@ -98,11 +106,10 @@
     font-size: 14px;
 }
 
-/* 4. Right Column: Finder Contact Form Card */
 .finder-form-card {
     background-color: var(--color-cream-card);
     color: #1F2D30;
-    padding: 30px;
+    padding: 28px;
     border-radius: 14px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -111,22 +118,21 @@
     font-family: var(--font-heading);
     font-size: 24px;
     color: var(--color-terracotta);
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
 }
 
 .finder-form-card p {
     font-size: 14px;
     color: #4A585C;
     line-height: 1.5;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
 }
 
 .finder-form-card label {
     display: block;
     font-weight: 700;
     font-size: 14px;
-    margin-top: 16px;
-    margin-bottom: 6px;
+    margin: 16px 0 6px;
     color: #2F3E42;
 }
 
@@ -145,7 +151,7 @@
     font-size: 14px;
     background-color: #FFFFFF;
     color: #1F2D30;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: 0.2s ease;
 }
 
 .finder-form-card input:focus,
@@ -168,7 +174,7 @@
     font-size: 15px;
     font-weight: 700;
     box-shadow: 0 4px 14px rgba(200, 121, 80, 0.35);
-    transition: all 0.25s ease;
+    transition: 0.25s ease;
 }
 
 .submit-btn:hover {
@@ -177,10 +183,15 @@
     box-shadow: 0 8px 20px rgba(200, 121, 80, 0.45);
 }
 
-/* 5. Responsive Layout */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .item-details-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .recovery-intro h2 {
+        font-size: 28px;
     }
 
     .item-card,

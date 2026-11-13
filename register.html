@@ -3,39 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoundIt | User Registration</title>
-    <!-- Shared Brand Stylesheet -->
-    <link rel="stylesheet" href="global.css">
-    <!-- Registration Page Stylesheet -->
+    <title>FoundIt | Report an Item</title>
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
 
-    <!-- Shared Navigation Header -->
     <header>
-        <div class="brand-group">
-            <h1 id="logo">FoundIt<span>!</span></h1>
-            <p class="tagline">Because every lost item deserves a way back.</p>
-        </div>
+        <h1>FoundIt<span>!</span></h1>
+        <p>Give lost things a way back.</p>
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="register.html" class="active">Register</a>
-            <a href="login.html">Login</a>
-            <a href="dashboard.html">Dashboard</a>
-            <a href="add-item.html">Add Item</a>
-            <a href="recover.html">Recover</a>
+            <a href="media.html">Explore Items</a>
+            <a href="register.html">Report an Item</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Gallery</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <!-- Main Content Area -->
     <main>
         <section class="form-intro">
-            <h2>Create Your Account</h2>
-            <p>Register as an item owner to start protecting your everyday carry belongings.</p>
+            <h2>Report a Lost or Found Item</h2>
+            <p>Tell us about the item so we can help connect it with its owner.</p>
         </section>
 
-        <form action="dashboard.html" method="get">
+        <!-- Added id="registration-form" -->
+        <form id="registration-form" action="#" method="get" novalidate>
 
             <fieldset>
                 <legend>Personal Information</legend>
@@ -97,7 +91,7 @@
                        min="1" max="10" value="1">
 
                 <label for="itemcolor">Main Item Colour</label>
-                <input type="color" id="itemcolor" name="itemcolor" value="#C87950">
+                <input type="color" id="itemcolor" name="itemcolor" value="#087fbd">
 
                 <label for="condition">How urgent is the report?</label>
                 <input type="range" id="condition" name="condition"
@@ -120,7 +114,7 @@
                 <p class="question">Where did you hear about FoundIt?</p>
 
                 <label class="choice">
-                    <input type="radio" name="source" value="university" checked required>
+                    <input type="radio" name="source" value="university" required>
                     University
                 </label>
 
@@ -147,18 +141,22 @@
 
             </fieldset>
 
+            <!-- Feedback message placeholder for JS -->
+            <p id="reg-feedback" style="display: none; margin-bottom: 15px; padding: 10px; border-radius: 6px; font-weight: bold;"></p>
+
             <div class="form-buttons">
-                <button type="submit">Register Account</button>
+                <button type="submit">Submit Report</button>
                 <button type="reset" class="reset-button">Clear Form</button>
             </div>
 
         </form>
     </main>
 
-    <!-- Shared Footer -->
     <footer>
         <p>&copy; 2026 FoundIt. Built to bring belongings back.</p>
     </footer>
 
+    <!-- Linked JavaScript File -->
+    <script src="register.js"></script>
 </body>
 </html>

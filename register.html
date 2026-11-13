@@ -4,21 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoundIt | Report an Item</title>
+    <link rel="stylesheet" href="global.css">
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
 
     <header>
-        <h1>FoundIt<span>!</span></h1>
-        <p>Give lost things a way back.</p>
+        <div class="brand-group">
+            <h1 id="logo">FoundIt<span>!</span></h1>
+            <p class="tagline">Because every lost item deserves a way back.</p>
+        </div>
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="media.html">Explore Items</a>
-            <a href="register.html">Report an Item</a>
-            <a href="services.html">Services</a>
-            <a href="portfolio.html">Gallery</a>
-            <a href="contact.html">Contact</a>
+            <a href="register.html" class="active">Register</a>
+            <a href="login.html">Login</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="add-item.html">Add Item</a>
+            <a href="recover.html">Recover</a>
         </nav>
     </header>
 
@@ -28,8 +31,7 @@
             <p>Tell us about the item so we can help connect it with its owner.</p>
         </section>
 
-        <!-- Added id="registration-form" -->
-        <form id="registration-form" action="#" method="get" novalidate>
+        <form action="#" method="get">
 
             <fieldset>
                 <legend>Personal Information</legend>
@@ -91,7 +93,7 @@
                        min="1" max="10" value="1">
 
                 <label for="itemcolor">Main Item Colour</label>
-                <input type="color" id="itemcolor" name="itemcolor" value="#087fbd">
+                <input type="color" id="itemcolor" name="itemcolor" value="#C87950">
 
                 <label for="condition">How urgent is the report?</label>
                 <input type="range" id="condition" name="condition"
@@ -141,9 +143,6 @@
 
             </fieldset>
 
-            <!-- Feedback message placeholder for JS -->
-            <p id="reg-feedback" style="display: none; margin-bottom: 15px; padding: 10px; border-radius: 6px; font-weight: bold;"></p>
-
             <div class="form-buttons">
                 <button type="submit">Submit Report</button>
                 <button type="reset" class="reset-button">Clear Form</button>
@@ -156,7 +155,5 @@
         <p>&copy; 2026 FoundIt. Built to bring belongings back.</p>
     </footer>
 
-    <!-- Linked JavaScript File -->
-    <script src="register.js"></script>
 </body>
 </html>

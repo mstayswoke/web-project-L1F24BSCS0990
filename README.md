@@ -3,7 +3,7 @@
 **Student Name:** Moeez Ur Rehman  
 **Roll No:** L1F24BSCS0990  
 **Course:** Web Technologies (BSCS Semester 5 — Project 1)  
-**Theme:** Smart QR-Enabled Everyday Carry & Belongings Recovery Platform  
+**Theme:** Smart Recovery System Platform  
 
 ## Teacher Approval Record
 - **Starting Route:** Route B (Custom Editorial Design)
@@ -13,24 +13,41 @@
 
 ## Project Structure & Assignment Mapping
 
-### Assignment 1 (Pages 1 to 3)
-1. **Home (`index.html` + `home.css` & `global.css`)**
-   - Hero overview, 3-step recovery process, ordered/unordered recovery checklist, floated product photo, and embedded video/audio walkthrough.
-   - Practises element/class/ID selectors, typography, borders, `position`, `float`, `overflow`, and `@keyframes` reveal animations.
-2. **Register (`register.html` + `register.css`)**
-   - Owner registration and item reporting form with all required HTML5 input types (`text`, `email`, `password`, `url`, `date`, `time`, `select`, `number`, `color`, `range`, `file`, `textarea`, `radio`, `checkbox`) and validation attributes (`required`, `readonly`, `disabled`, `min`, `max`, `minlength`, `maxlength`, `checked`, `selected`).
-   - Practises attribute selectors (`input[readonly]`), combinators (`label.choice input`), pseudo-classes (`:hover`, `:focus`, `:valid`, `:invalid`), and pseudo-elements (`::before`, `::placeholder`).
-3. **Login (`login.html` + `auth.css` + `login.js`)**
-   - Owner sign-in form with centered stacked navigation header, CSS validation states, and live DOM password/email check.
+## 📂 Assignment 1 — Pages 1 to 3 (Click to View Code)
 
-### Assignment 2 (Pages 4 to 6)
-4. **Owner Dashboard (`dashboard.html` + `dashboard.css`)**
-   - Flexbox summary statistics cards with hover transitions, registered belongings data table with status badges, and finder alert card.
-5. **Add Item (`add-item.html` + `add-item.css`)**
-   - Responsive CSS Grid (`auto-fit`) showcasing three QR tag product cards (`<figure>` / `<figcaption>`) with `@keyframes` entrance animation, followed by an item registration form.
-6. **Public Item Recovery (`recover.html` + `recover.css` + `recover.js`)**
-   - Mixed CSS Grid + Flexbox layout displaying missing item status alongside a finder contact form with live DOM input validation.
+1. **Page 1: Home**
+   - HTML: [index.html](index.html)
+   - CSS: [home.css](home.css) | Shared: [global.css](global.css)
+   - *Features:* Hero overview, 3-step guide, recovery checklist, floated photo, and embedded video/audio.
 
+2. **Page 2: Register**
+   - HTML: [register.html](register.html)
+   - CSS: [register.css](register.css)
+   - *Features:* Owner registration form with all required HTML5 inputs and CSS validation states.
+
+3. **Page 3: Login**
+   - HTML: [login.html](login.html)
+   - CSS: [auth.css](auth.css)
+   - *Features:* Centered editorial header and owner sign-in form.
+
+---
+
+## 📂 Assignment 2 — Pages 4 to 6 (Click to View Code)
+
+4. **Page 4: Owner Dashboard**
+   - HTML: [dashboard.html](dashboard.html)
+   - CSS: [dashboard.css](dashboard.css)
+   - *Features:* Flexbox summary statistics cards, belongings data table, and finder alerts.
+
+5. **Page 5: Add Item**
+   - HTML: [add-item.html](add-item.html)
+   - CSS: [add-item.css](add-item.css)
+   - *Features:* Responsive CSS Grid (`auto-fit`) showcasing three QR tag product cards (`<figure>` / `<figcaption>`) and registration form.
+
+6. **Page 6: Public Item Recovery**
+   - HTML: [recover.html](recover.html)
+   - CSS: [recover.css](recover.css)
+   - *Features:* Two-column CSS Grid + Flexbox layout for reporting found items.
 ---
 
 ## AI Usage Log
